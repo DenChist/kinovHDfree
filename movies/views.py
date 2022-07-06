@@ -7,6 +7,6 @@ def index_page(request):
     return render(request, 'movies/index.html', {'movies': movies})
 
 
-def player_page(request, kinopoisk_id):
-    movie = Movie.objects.get(kinopoisk_id=kinopoisk_id)
-    return render(request, 'movies/player.html', {'kinopoisk_id': kinopoisk_id, 'movie': movie})
+def player_page(request, movie_id):
+    movie = Movie.objects.get(movie_id=movie_id)
+    return render(request, 'movies/player.html', {'movie': movie})

@@ -6,15 +6,13 @@
     <p>{{ movie.description }}</p>
 
     <hr>
-    <h1>Download files using the WebTorrent protocol (BitTorrent over WebRTC).</h1>
 
     <form>
       <label for="torrentId">Download from a magnet link: </label>
-      <input name="torrentId", placeholder="magnet:" value="">
+      0<input name="torrentId", placeholder="magnet:" value="{{ movie.torrent_id }}">
       <button type="submit">Download</button>
     </form>
 
-    <h2>Log</h2>
     <div class="log"></div>
 
     <!-- Include the latest version of WebTorrent -->
