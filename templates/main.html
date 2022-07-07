@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block style %}
+<link rel="stylesheet"  href="{% static 'main.css' %}">
+{% endblock %}
+
+{% block main %}
+{% for movie in movies %}
+<div class="season">
+    <button onclick="location.href='season/{{movie.movie_id}}'" type="button">
+        <img
+                alt=""
+                class="num"
+                src="../media/{{movie.image}}"
+        />
+    </button>
+    <p class="num-season">{{ movie.name }}<br /></p>
+</div>
+{% endfor %}
+{% endblock %}

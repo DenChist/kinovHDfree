@@ -1,0 +1,29 @@
+.flex-wrapper-one {
+  padding: 0 0 0 0px;
+  display: flex;
+  align-items: flex-start;
+}
+.num {
+  width: 410px;
+  height: 230px;
+  margin-right: 80px;
+  box-shadow: 0 4px 4px 0 var(--transparent-black) inset;
+  border: 1px solid var(--transparent-black-2);
+  border-radius: 40px;
+}
+.god-vypuska-zhanr-fentezi-boevik {
+  height: 300px;
+  width: 420px;
+  font-family: "Inter";
+  font-size: 20px;
+  font-weight: 900;
+  line-height: normal;
+  color: var(--light-grey);
+  display: flex;
+  margin-top: 15px;
+}
+
+button {
+  all: unset;
+  cursor: pointer;
+}
