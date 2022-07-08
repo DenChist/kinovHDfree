@@ -18,15 +18,17 @@
         ВОЗРАСТНОЕ ОГРАНИЧЕНИЕ: {{movie.age_rating}}
       </p>
     </div>
-
+<p class = "torrent">{{magnet}}</p>
 <div class="myVideo"></div>
+
 
     <!-- Include WebTorrent -->
     <script src="https://cdn.jsdelivr.net/npm/webtorrent@latest/webtorrent.min.js"></script>
 
     <!-- Torrent streaming -->
     <script>
-        torrentId = "{{magnet}}"
+        var elem = document.querySelector('.torrent')
+        const torrentId = elem.innerText
 
         const client = new WebTorrent()
         client.add(torrentId, onTorrent)
@@ -41,5 +43,6 @@
             })
         }
     </script>
+
 {% endblock %}
 
