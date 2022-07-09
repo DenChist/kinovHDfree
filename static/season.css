@@ -27,3 +27,7 @@ button {
   all: unset;
   cursor: pointer;
 }
+
+.torrent{
+  overflow: hidden;
+}
