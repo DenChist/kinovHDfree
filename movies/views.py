@@ -4,6 +4,7 @@ import bencodepy
 import hashlib
 import base64
 
+
 def index_page(request):
     movies = Movie.objects.all()
     return render(request, 'main.html', {'movies': movies})
