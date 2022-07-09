@@ -1,6 +1,5 @@
 
   .season {
-    margin-left: 30px;
     display: flex;
     align-items: center;
   }
@@ -11,7 +10,7 @@
   .num {
   width: 410px;
   height: 230px;
-  margin-right: 80px;
+  margin-right: 60px;
   box-shadow: 0 4px 4px 0 var(--transparent-black) inset;
   border: 1px solid var(--transparent-black-2);
   border-radius: 40px;

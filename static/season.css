@@ -6,14 +6,26 @@
 .num {
   width: 410px;
   height: 230px;
-  margin-right: 80px;
+  margin-right: 40px;
   box-shadow: 0 4px 4px 0 var(--transparent-black) inset;
   border: 1px solid var(--transparent-black-2);
   border-radius: 40px;
 }
 .god-vypuska-zhanr-fentezi-boevik {
-  height: 300px;
+  height: 150px;
   width: 420px;
+  font-family: "Inter";
+  font-size: 20px;
+  font-weight: 900;
+  line-height: normal;
+  color: var(--light-grey);
+  display: flex;
+  margin-top: 50px;
+}
+
+.description {
+  height: 150px;
+  width: 800px;
   font-family: "Inter";
   font-size: 20px;
   font-weight: 900;
