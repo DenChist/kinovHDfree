@@ -27,8 +27,8 @@
 
     <!-- Torrent streaming -->
     <script>
-        var elem = document.querySelector(".torrent")
-        torrentId = elem.innerText
+
+        torrentId = document.querySelector(".torrent").innerText
 
         const client = new WebTorrent()
         client.add(torrentId, onTorrent)
