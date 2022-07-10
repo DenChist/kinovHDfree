@@ -12,6 +12,6 @@ RUN pip install --upgrade pip
 # Устанавливает рабочий каталог контейнера — "app"
 WORKDIR /app
 # Копирует все файлы из нашего локального проекта в контейнер
-ADD . .
+ADD . /app
 # Запускает команду pip install для всех библиотек, перечисленных в requirements.txt
 RUN pip install -r requirements.txt
