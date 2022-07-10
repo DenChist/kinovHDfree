@@ -7,16 +7,21 @@
 {% endblock %}
 
 {% block main %}
+<table>
 {% for movie in movies %}
-<div class="season">
-    <button onclick="location.href='season/{{movie.movie_id}}'" type="button">
-        <img
-                alt=""
-                class="num"
-                src="../media/{{movie.image}}"
-        />
-    </button>
-    <p class="num-season">{{ movie.name }}<br /></p>
-</div>
+    <td>
+        <div class="season">
+            <h3 class="num-season">{{ movie.name }}<br /></h3>
+            <button onclick="location.href='season/{{movie.movie_id}}'" type="button">
+                <img
+                        alt=""
+                        class="num"
+                        src="../media/{{movie.image}}"
+                />
+            </button>
+
+        </div>
+    </td>
 {% endfor %}
+</table>
 {% endblock %}

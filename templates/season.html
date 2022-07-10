@@ -9,45 +9,32 @@
 
 {% block main %}
 <div class="flex-wrapper-one">
-      <img alt="" class="num" src="../media/{{movie.image}}" />
-      <p class="god-vypuska-zhanr-fentezi-boevik">
-        ГОД ВЫПУСКА: {{movie.year}}<br />
-        ЖАНР: {{movie.genre}}<br />
-        СТРАНА: {{movie.country}}<br />
-        АВТОР: {{movie.author}}<br />
-        ВОЗРАСТНОЕ ОГРАНИЧЕНИЕ: {{movie.age_rating}}
-      </p>
+    <div class="season">
+        <h3 class="num-season">{{ movie.name }}<br /></h3>
+        <div class="movie">
+            <img
+                    alt=""
+                    class="num"
+                    src="../media/{{movie.image}}"
+            />
+            <p class="god-vypuska-zhanr-fentezi-boevik">
+                ГОД ВЫПУСКА: {{movie.year}}<br/><br/>
+                ЖАНР: {{movie.genre}}<br/><br/>
+                СТРАНА: {{movie.country}}<br/><br/>
+                АВТОР: {{movie.author}}<br/><br/>
+                ВОЗРАСТНОЕ ОГРАНИЧЕНИЕ: {{movie.age_rating}}
+            </p>
+        </div>
     </div>
-<p class="description">
-    {{movie.description}}
-</p>
 
-<p class = "torrent">{{magnet}}</p>
+</div>
+
+<p class="description">{{movie.description}}</p>
 
 <div class="myVideo"></div>
 
-
-    <!-- Include WebTorrent -->
-    <script src="https://cdn.jsdelivr.net/npm/webtorrent@latest/webtorrent.min.js"></script>
-
-    <!-- Torrent streaming -->
-    <script>
-
-        torrentId = document.querySelector(".torrent").innerText
-
-        const client = new WebTorrent()
-        client.add(torrentId, onTorrent)
-
-        // Render media files into to the page
-        function onTorrent (torrent) {
-            torrent.files.forEach(function (file) {
-                if (file.name.endsWith('.mp4'))
-                {
-                    file.appendTo('.myVideo')
-                }
-            })
-        }
-    </script>
+<script src="https://cdn.jsdelivr.net/npm/webtorrent@latest/webtorrent.min.js"></script>
+<script src="{% static 'torrent.js' %}" magnet="{{magnet}}"></script>
 
 {% endblock %}
 

@@ -1,29 +1,27 @@
 
   .season {
-    display: flex;
     align-items: center;
+    margin-right: 100px;
   }
 
 .season:not(:last-of-type) {
     margin-bottom: 35px;
   }
   .num {
-  width: 410px;
-  height: 230px;
-  margin-right: 60px;
+  width: 270px;
+  height: 400px;
   box-shadow: 0 4px 4px 0 var(--transparent-black) inset;
   border: 1px solid var(--transparent-black-2);
   border-radius: 40px;
 }
 
   .num-season {
-    height: 75px;
-    width: 270px;
+    height: 100px;
+    width: 300px;
     color: var(--light-grey);
     display: flex;
     text-align: center;
     font-family: var(--inter-64-black-family);
-    font-size: var(--inter-64-black-size);
     font-weight: var(--inter-64-black-weight);
     line-height: var(--inter-64-black-line-height);
   }
