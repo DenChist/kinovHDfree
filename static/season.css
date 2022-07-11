@@ -49,7 +49,6 @@ display: flex;
 }
 
 .description {
-  height: 150px;
   width: 800px;
   font-family: "Inter";
   font-size: 20px;
@@ -57,7 +56,8 @@ display: flex;
   line-height: normal;
   color: var(--light-grey);
   display: flex;
-  margin-top: 15px;
+  margin-top: 30px;
+  margin-bottom: 30px;
 }
 
 button {
