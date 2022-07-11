@@ -4,7 +4,7 @@ from django.db import models
 class Movie(models.Model):
     movie_id = models.IntegerField(null=False)
     name = models.CharField(max_length=250)
-    genre = models.TextField(max_length=250)
+    genre = models.CharField(max_length=500)
     year = models.IntegerField(null=False)
     country = models.CharField(max_length=250)
     author = models.CharField(max_length=250)
